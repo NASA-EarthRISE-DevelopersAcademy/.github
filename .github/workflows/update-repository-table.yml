@@ -18,15 +18,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the .github repository
+      - name: Check out the .github-private repository
         uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
 
       - name: Generate repository table
         env:
           GITHUB_ORGANIZATION: NASA-EarthRISE-DevelopersAcademy
+          GITHUB_API_TOKEN: ${{ secrets.ORG_REPO_READ_TOKEN }}
         run: python scripts/update_repository_table.py
 
-      - name: Commit updated table
+      - name: Commit updated repository table
         shell: bash
         run: |
           if git diff --quiet -- profile/README.md; then
