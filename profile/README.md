@@ -33,7 +33,10 @@ The following table is generated automatically from the public repositories in t
 
 <!-- REPOSITORY_TABLE_START -->
 
-_The repository list has not been generated yet._
+| Repository | Description |
+|---|---|
+| [academy-defaults-test](https://github.com/earthrise-developers-academy-lab/academy-defaults-test) | Tests inherited Developers Academy organization defaults. |
+| [developers-academy-github-guide](https://github.com/earthrise-developers-academy-lab/developers-academy-github-guide) | Onboarding and project workflow guide for Developers Academy participants. |
 
 <!-- REPOSITORY_TABLE_END -->
 
