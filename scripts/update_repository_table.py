@@ -11,7 +11,7 @@ from typing import Any
 
 ORGANIZATION = os.environ.get(
     "GITHUB_ORGANIZATION",
-    "earthrise-developers-academy-lab",
+    "NASA-EarthRISE-DevelopersAcademy",
 )
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
