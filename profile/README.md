@@ -27,13 +27,13 @@ Project teams use GitHub to organize work, document decisions, review changes, a
 
 Use `Closes #<issue-number>` in the pull request description when merging the pull request should automatically close the related Issue.
 
-## Organization Repositories
 
-The following table is generated automatically from the public repositories in this organization.
+## Project Repositories
 
-<!-- REPOSITORY_TABLE_START -->
+Project repositories are private and available according to each participant’s team and repository permissions.
 
-<!-- REPOSITORY_TABLE_END -->
+[Browse the organization repositories](https://github.com/orgs/NASA-EarthRISE-DevelopersAcademy/repositories)
+
 
 ## General Expectations
 
