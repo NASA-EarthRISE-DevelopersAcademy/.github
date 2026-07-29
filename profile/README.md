@@ -1,7 +1,5 @@
 # NASA EarthRISE Developers Academy
 
-The NASA EarthRISE Developers Academy brings developers, Earth scientists, and application partners together to build practical and reproducible tools for Earth science applications.
-
 Project teams use GitHub to organize work, document decisions, review changes, and maintain a clear record of project progress.
 
 ## Using GitHub in Your Project
