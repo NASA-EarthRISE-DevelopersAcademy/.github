@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate repository table
         env:
-          GITHUB_ORGANIZATION: earthrise-developers-academy-lab
+          GITHUB_ORGANIZATION: NASA-EarthRISE-DevelopersAcademy
         run: python scripts/update_repository_table.py
 
       - name: Commit updated table
