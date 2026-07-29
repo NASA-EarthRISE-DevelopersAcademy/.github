@@ -1,0 +1,42 @@
+name: Update organization repository table
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-organization-repository-table
+  cancel-in-progress: false
+
+jobs:
+  update-repository-table:
+    name: Update repository table
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the .github repository
+        uses: actions/checkout@v6
+
+      - name: Generate repository table
+        env:
+          GITHUB_ORGANIZATION: earthrise-developers-academy-lab
+        run: python scripts/update_repository_table.py
+
+      - name: Commit updated table
+        shell: bash
+        run: |
+          if git diff --quiet -- profile/README.md; then
+            echo "The repository table is already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add profile/README.md
+          git commit -m "Update organization repository table"
+          git push
